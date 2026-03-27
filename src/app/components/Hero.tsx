@@ -7,13 +7,11 @@ import { motion } from 'framer-motion';
 const Hero: React.FC = () => {
   return (
     <div id="home" className="min-h-screen w-full overflow-hidden flex flex-col relative">
-      {/* Full size background image */}
       <div className="absolute inset-0 w-full h-full z-0">
         <div className="relative w-full h-full">
-          {/* Mobile view */}
           <div className="md:hidden absolute inset-0 flex items-start justify-center pt-10">
             <Image
-              src="/mobile_robot.webp"
+              src="/mobile_robot.webp?v=20260327"
               alt="Robot Image"
               width={440}
               height={600}
@@ -21,10 +19,9 @@ const Hero: React.FC = () => {
               priority
             />
           </div>
-          {/* Desktop view */}
           <div className="hidden md:block w-full h-full">
             <Image
-              src="/robotnew.webp"
+              src="/robotnew.webp?v=20260327"
               alt="Robot Image"
               fill
               className="object-contain"
@@ -35,13 +32,10 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Content spacer */}
       <div className="flex-grow"></div>
 
-      {/* Bottom Title Section */}
       <div className="w-full pb-12 pt-4 z-10">
         <div className="container mx-auto px-4">
-          {/* Mobile View */}
           <div className="md:hidden flex flex-col items-center space-y-2 mt-[60vh]">
             <div className="flex flex-col items-center space-y-6 ">
               <h1 className="text-[#FF8A00] text-4xl font-['BS'] tracking-wide max-sm:top-[60vw] max-sm:text-[10vw] max-sm:leading-[6vw]">CAMBRIAN</h1>
@@ -54,7 +48,7 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-black text-base font-['OSK'] font-bold tracking-wider text-center"
               >
-                20th APR 2025 • 9:30 AM TO 5:00 PM
+                2nd MAY 2026 • 9:30 AM TO 5:00 PM
               </motion.p>
               <motion.p
                 initial={{ x: 100, opacity: 0 }}
@@ -128,7 +122,6 @@ const Hero: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Desktop View */}
           <div className="hidden md:block text-center px-4">
             <div className="hidden md:block lg:hidden">
               <h1 className="text-[#FF8A00] text-[5vw] font-['BS'] tracking-wide whitespace-nowrap leading-normal">

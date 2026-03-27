@@ -10,7 +10,7 @@ export default function Schedule() {
       title: 'OPENING CEREMONY',
       location: 'Main Stage',
       activities: [
-        { name: 'WELCOME ADDRESS', description: 'Introduction to CIT Open House 2025' },
+        { name: 'WELCOME ADDRESS', description: 'Introduction to CIT Open House 2026' },
         { name: 'INAUGURAL ADDRESS', description: 'By the Chairman of AICTE' },
         { name: 'KEYNOTE SESSION', description: 'Future of Technology & Innovation' }
       ],

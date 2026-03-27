@@ -195,11 +195,10 @@ export default function Footer() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center">
           <p className="font-['OSK'] tracking-wide text-gray-800 text-center text-sm">
-            © 2025 Cambridge Institute of Technology. All rights reserved.
+            © 2026 Cambridge Institute of Technology. All rights reserved.
           </p>
         </div>
       </motion.div>
     </footer>
   );
 }
-

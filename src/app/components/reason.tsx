@@ -36,9 +36,9 @@ const Reason = () => {
               1
             </div>
             <div className="ml-20 max-sm:ml-16">
-              <h3 className="text-3xl font-bold text-green-700 mb-2 font-['OSK'] tracking-wide md:tracking-wider">Cambrian Open House 2025: Where Ideas Converge</h3>
+              <h3 className="text-3xl font-bold text-green-700 mb-2 font-['OSK'] tracking-wide md:tracking-wider">Cambrian Open House 2026: Where Ideas Converge</h3>
               <p className="text-gray-700 font-['OSK'] tracking-wider md:tracking-widest text-lg md:text-xl font-light leading-snug md:leading-normal">
-                With over 120+ stalls, Cambrian open house 2025, brings together a vibrant mix of technology, creativity, and culture. From food and flea markets to interactive panel discussions with industry experts, experience a dynamic environment where ideas and insights come together.
+                With over 120+ stalls, Cambrian Open House 2026 brings together a vibrant mix of technology, creativity, and culture. From food and flea markets to interactive panel discussions with industry experts, experience a dynamic environment where ideas and insights come together.
               </p>
             </div>
           </div>
@@ -92,9 +92,9 @@ const Reason = () => {
 
 <div className="relative inline-flex justify-center items-center px-3 sm:px-5 md:px-8 py-2 rounded-full bg-white/20 backdrop-blur-md border-2 border-green-500 text-green-700 font-['BS'] text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-lg font-bold uppercase tracking-wide shadow-lg animate-pulse-glow hover:scale-105 transition-all duration-300 mx-auto w-auto max-w-[95%]">
   <span className="text-center truncate sm:whitespace-normal">
-    Grand Inauguration by{" "}
+    Cambrian Open House 2025{" "}
     <br className="sm:hidden" />
-    AICTE Chairman
+    Inauguration by AICTE Chairman
   </span>
 </div>
 
@@ -123,15 +123,15 @@ const Reason = () => {
 
   {/* Description */}
   <p className="text-gray-600 font-['OSK'] text-base md:text-lg leading-relaxed tracking-wide text-center max-w-3xl">
-    Cambrian Open House 2025 is honored to be inaugurated by 
-    <span className="font-semibold text-green-600"> Prof. (Dr.) T G Sitharam</span>, 
+    At last year&apos;s Cambrian Open House 2025, the event was inaugurated by
+    <span className="font-semibold text-green-600"> Prof. (Dr.) T G Sitharam</span>,
     Chairman of the All India Council for Technical Education (AICTE), Government of India.
-    His esteemed presence elevates the event&apos;s national significance — celebrating creativity, leadership, and the boundless potential of India&apos;s next generation of innovators.
+    His presence marked a memorable milestone for the 2025 edition and highlighted the event&apos;s national significance in celebrating creativity, leadership, and the boundless potential of India&apos;s next generation of innovators.
   </p>
 
   {/* Callout */}
   <p className="text-green-600 font-semibold text-lg md:text-xl font-['BS'] text-center">
-    Be there to witness this historic moment!
+    A memorable highlight from last year&apos;s edition.
   </p>
 
 </div>
@@ -144,7 +144,7 @@ const Reason = () => {
           <span className="font-['BS'] text-green-500">JOIN!</span>
         </h2>
         <p className="font-['OSK'] max-sm:mt-[1vw] text-center text-gray-700 tracking-wider md:tracking-widest text-lg md:text-xl font-light leading-snug md:leading-normal max-w-4xl mx-auto px-4">
-          Cambrian Open House 2025 welcomes everyone! Whether you are a tech enthusiast, student, entrepreneur, or a curious mind eager to explore new ideas and experience innovative demonstrations, this event is for you. Entry is absolutely free!!!<br></br>
+          Cambrian Open House 2026 welcomes everyone! Whether you are a tech enthusiast, student, entrepreneur, or a curious mind eager to explore new ideas and experience innovative demonstrations, this event is for you. Entry is absolutely free!!!<br></br>
           Register now and join us for an immersive experience!
         </p>
 

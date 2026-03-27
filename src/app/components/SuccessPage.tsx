@@ -22,7 +22,7 @@ const SuccessPage = () => {
                             We are all ready to see you at the Open Day!
                         </p>
                         <p className="text-lg text-[#67B044] font-semibold font-['OSK'] tracking-wider">
-                            20th APR 2025 from 9:30 AM - 5:00 PM
+                            2nd MAY 2026 from 9:30 AM - 5:00 PM
                         </p>
                     </motion.div>
 
@@ -46,7 +46,7 @@ const SuccessPage = () => {
                                         Confirmation Details
                                     </h3>
                                     <p className="text-gray-600 font-['OSK'] tracking-wider leading-relaxed">
-                                        Your registration for Cambridge Institute of Technology Open House 2025 has been successfully processed. We&apos;re excited to welcome you to our campus for an extraordinary showcase of innovation and technology.
+                                        Your registration for Cambridge Institute of Technology Open House 2026 has been successfully processed. We&apos;re excited to welcome you to our campus for an extraordinary showcase of innovation and technology.
                                     </p>
                                 </div>
                             </div>
