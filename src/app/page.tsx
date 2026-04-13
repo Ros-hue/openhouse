@@ -1,9 +1,9 @@
 // src/app/page.tsx
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
 import Hero from './components/Hero';
 import About from './components/About';
+import { motion } from 'framer-motion';
 //import Events from './components/Events';
 import Schedule from './components/Schedule';
 import Navbar from './components/Navbar';
@@ -34,7 +34,7 @@ export default function MainPage() {
     <div className="relative min-h-screen">
       <Navbar />
 
-      {/* <div className="bottom-4 sm:bottom-6 z-50 fixed right-4 sm:right-6">
+      <div className="bottom-4 sm:bottom-6 z-50 fixed right-4 sm:right-6">
         <motion.button
           className="bg-[#FF8A00] text-white font-['OSK'] tracking-wider uppercase py-3 px-5 sm:px-6 rounded-full text-sm sm:text-base shadow-lg transition-all hover:bg-[#FFB700]"
           initial={{ scale: 1 }}
@@ -46,7 +46,7 @@ export default function MainPage() {
         >
           Register Now
         </motion.button>
-      </div> */}
+      </div>
 
 
       <section id="home" className="min-h-screen">

@@ -451,8 +451,9 @@ export default function About() {
       if (res.ok) router.push('/success');
       else setStatus("Protocol Error: Registration Failed.");
     } catch (error) {
-      setStatus("Network Error.");
-    }
+  console.error("Registration failed:", error);
+  setStatus("Network Error.");
+}
   };
 
   return (
