@@ -299,6 +299,104 @@ const Reason = () => {
         </div>
       </section>
 
+      {/* CHIEF GUEST */}
+
+      <section className="relative z-10 bg-black text-white py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="lg:col-span-5"
+            >
+              <div className="border-l-4 border-[#9EE666] pl-8">
+                <h4 className="text-[#9EE666] font-mono text-sm mb-4 tracking-[0.3em] uppercase">Chief Guest</h4>
+                <h3 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-8">
+                  Prof. <br /> Anil Sahasrabudhe
+                </h3>
+                <p className="text-zinc-400 text-lg uppercase tracking-widest mb-10">
+                  Chairman, National Educational Technology Forum, and former Chairman, AICTE
+                </p>
+                <p className="text-zinc-300 font-light leading-relaxed text-lg mb-8">
+                  The event will be graced by Prof. Anil Sahasrabudhe, Chairman of the National Educational Technology Forum and former Chairman of AICTE, whose distinguished contributions to technical education and innovation continue to inspire and shape the future of India&apos;s academic and technological landscape.
+                </p>
+                <div className="inline-block px-4 py-2 border border-zinc-700 rounded-full text-zinc-500 text-xs uppercase tracking-tighter">
+                  A memorable milestone for the 2025 edition
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 1.1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="lg:col-span-7 relative"
+            >
+              <div className="absolute -top-10 -left-10 z-20 bg-[#9EE666] text-black p-6 rounded-full font-bold text-center leading-tight rotate-12 hidden md:block">
+                CHIEF <br /> GUEST
+              </div>
+              <Image
+                src="/reasons_page/anil.webp"
+                alt="Prof. Anil Sahasrabudhe"
+                width={1000}
+                height={700}
+                className="w-full h-auto object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-1000"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Guest of Honor */}
+
+      <section className="relative z-10 bg-black text-white py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="lg:col-span-5"
+            >
+              <div className="border-l-4 border-[#9EE666] pl-8">
+                <h4 className="text-[#9EE666] font-mono text-sm mb-4 tracking-[0.3em] uppercase">Guest of Honor</h4>
+                <h3 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-8">
+                  Sri. <br /> N G Subramaniam
+                </h3>
+                <p className="text-zinc-400 text-lg uppercase tracking-widest mb-10">
+                  Board Member, Tata Elxsi limited and former COO, TCS
+                </p>
+                <p className="text-zinc-300 font-light leading-relaxed text-lg mb-8">
+                  The event will be graced by Sri. N G Subramaniam, Board Member of Tata Elxsi Limited and former COO of TCS, whose distinguished contributions to the technology and innovation landscape continue to inspire and shape the future of India&apos;s academic and technological landscape.
+                </p>
+                <div className="inline-block px-4 py-2 border border-zinc-700 rounded-full text-zinc-500 text-xs uppercase tracking-tighter">
+                  A memorable milestone for the 2025 edition
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 1.1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="lg:col-span-7 relative"
+            >
+              <div className="absolute -top-10 -left-10 z-20 bg-[#9EE666] text-black p-6 rounded-full font-bold text-center leading-tight rotate-12 hidden md:block">
+                GUEST <br /> OF <br /> HONOR
+              </div>
+              <Image
+                src="/reasons_page/subramaniam.webp"
+                alt="Sri. N G Subramaniam"
+                width={1000}
+                height={700}
+                className="w-full h-auto object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-1000"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+
       {/* INAUGURATION SECTION - EDITORIAL SPREAD */}
       <section className="relative z-10 bg-black text-white py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
