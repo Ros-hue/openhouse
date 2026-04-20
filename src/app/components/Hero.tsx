@@ -256,6 +256,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import RegisterButton from './RegisterButton';
 
 const Hero = () => {
   const [isFinished, setIsFinished] = useState(false);
@@ -326,17 +327,15 @@ const Hero = () => {
                   </p>
                 </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => document.getElementById("registration-section")?.scrollIntoView({ behavior: "smooth" })}
+                <RegisterButton
                   className="group relative px-12 py-5 bg-white text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all"
+                  label="Initialize Registration"
                 >
                   <span className="relative z-10 flex items-center gap-3">
                     Initialize Registration
                     <div className="w-1.5 h-1.5 rounded-full bg-black group-hover:bg-[#FF8A00] transition-colors" />
                   </span>
-                </motion.button>
+                </RegisterButton>
               </motion.div>
 
             </div>

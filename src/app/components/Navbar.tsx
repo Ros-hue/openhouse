@@ -4,31 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
+import RegisterButton from './RegisterButton';
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
-  const router = useRouter();
   const isGalleryPage = pathname === '/flea-market/gallery';
-
-  const scrollToRegistration = () => {
-    if (isGalleryPage) {
-      router.push('/#registration-section');
-      return;
-    }
-
-    const element = document.getElementById('registration-section');
-    if (element) {
-      const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   const navShellClass = isGalleryPage
     ? 'border border-white/12 bg-black/35 shadow-[0_16px_60px_rgba(0,0,0,0.3)]'
@@ -59,12 +39,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        <button
-          onClick={scrollToRegistration}
-          className={navTextClass}
-        >
-          Register
-        </button>
+        <RegisterButton className={navTextClass} />
         <Link href="/flea-market/gallery" className={navTextClass}>
           Flea Market
         </Link>
