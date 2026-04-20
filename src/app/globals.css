@@ -239,6 +239,11 @@ body {
   overflow-x: hidden;
 }
 
+.gtm-noscript-frame {
+  display: none;
+  visibility: hidden;
+}
+
 .min-h-screen {
   min-height: 100vh;
   width: 100%;
