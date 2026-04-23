@@ -102,10 +102,14 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 import { GoogleAuth } from "google-auth-library";
 import { NextResponse } from "next/server";
 
+function normalize(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
 // Load environment variables
 const SHEET_ID = process.env.GOOGLE_SHEETS_ID;
 const CLIENT_EMAIL = process.env.GOOGLE_SHEETS_CLIENT_EMAIL;
-// const PRIVATE_KEY = process.env.GOOGLE_SHEETS_PRIVATE_KEY.replace(/\\n/g, "\n");
+
 const PRIVATE_KEY = (process.env.GOOGLE_SHEETS_PRIVATE_KEY || "").replace(/\\n/g, "\n");
 
 export async function POST(req) {
@@ -125,6 +129,28 @@ export async function POST(req) {
     const doc = new GoogleSpreadsheet(SHEET_ID, auth);
     await doc.loadInfo(); // Load spreadsheet info
     const sheet = doc.sheetsByIndex[0]; 
+
+    const rows = await sheet.getRows();
+
+const incomingEmail = normalize(body.email);
+const incomingPhone = String(body.phoneNumber || "").trim();
+
+const duplicate = rows.some((row) => {
+  const existingEmail = normalize(row.get("Email"));
+  const existingPhone = String(row.get("Phone") || "").trim();
+
+  return (
+    (incomingEmail && incomingEmail === existingEmail) ||
+    (incomingPhone && incomingPhone === existingPhone)
+  );
+});
+
+if (duplicate) {
+  return NextResponse.json(
+    { error: "You have already registered." },
+    { status: 409 }
+  );
+}
     // const sheet = doc.sheetsByTitle["coh2026"];
 
     // Append data to Google Sheet
