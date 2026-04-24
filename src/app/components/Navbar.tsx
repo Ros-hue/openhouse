@@ -54,7 +54,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import gsap from 'gsap';
 
 const Navbar: React.FC = () => {
