@@ -3,11 +3,11 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import FleaMarketGalleryPage from '../flea-market/gallery/page'; 
+
 
 
 import gsap from 'gsap';
-import { fleaMarketGallery } from '@/lib/fleaMarketGallery';
+
 
 const Navbar: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
