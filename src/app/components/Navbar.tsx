@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 
@@ -18,10 +17,6 @@ const Navbar: React.FC = () => {
   const navShellClass = isGalleryPage
     ? 'border border-white/12 bg-black/35 shadow-[0_16px_60px_rgba(0,0,0,0.3)]'
     : 'shadow-md';
-
-  const navTextClass = isGalleryPage
-    ? "font-['OSK'] tracking-wider uppercase text-white hover:text-[#FF8A00] transition-colors duration-200 whitespace-nowrap bg-transparent"
-    : "font-['OSK'] tracking-wider uppercase text-black hover:text-gray-600 transition-colors duration-200 whitespace-nowrap bg-transparent";
 
   useEffect(() => {
     const ctx = gsap.context(() => {
