@@ -3,9 +3,11 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import FleaMarketGalleryPage from '../flea-market/gallery/page'; 
 
 
 import gsap from 'gsap';
+import { fleaMarketGallery } from '@/lib/fleaMarketGallery';
 
 const Navbar: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
@@ -82,6 +84,14 @@ const Navbar: React.FC = () => {
         >
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em]">
             Register
+          </span>
+        </button>
+            <button
+            onClick={() => window.open('/flea-market/gallery', '_blank')}
+          className="flex items-center gap-3 h-11 px-6 rounded-xl bg-zinc-950 dark:bg-white text-white dark:text-black hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl"
+        >
+          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em]">
+           Flea Market
           </span>
         </button>
 
