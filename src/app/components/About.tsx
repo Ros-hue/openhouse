@@ -849,13 +849,18 @@ export default function About() {
               </div>
 
               <div className="grid grid-cols-2 gap-6">
-                <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="Age*" required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all" />
-                <select name="gender" value={formData.gender} onChange={handleChange} required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all appearance-none">
-                  <option value="" disabled>Gender*</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
+                <div>
+                  <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="Age*" required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all" />
+                </div>
+                <div>
+                  <label htmlFor="gender" className="sr-only">Gender</label>
+                  <select id="gender" name="gender" value={formData.gender} onChange={handleChange} required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all appearance-none">
+                    <option value="" disabled>Gender*</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
               </div>
 
               <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number*" required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all" />
@@ -883,13 +888,16 @@ export default function About() {
                 </AnimatePresence>
               </div>
 
-              <select name="occupation" value={formData.occupation} onChange={handleChange} required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all appearance-none">
-                <option value="" disabled>Occupation*</option>
-                <option>Student</option>
-                <option>Industry Professional</option>
-                <option>Researcher</option>
-                <option>Other</option>
-              </select>
+              <div>
+                <label htmlFor="occupation" className="sr-only">Occupation</label>
+                <select id="occupation" name="occupation" value={formData.occupation} onChange={handleChange} required className="w-full bg-zinc-900 border-none rounded-2xl p-5 focus:ring-2 focus:ring-[#9EE666] transition-all appearance-none">
+                  <option value="" disabled>Occupation*</option>
+                  <option>Student</option>
+                  <option>Industry Professional</option>
+                  <option>Researcher</option>
+                  <option>Other</option>
+                </select>
+              </div>
 
               <motion.button
                 type="submit"

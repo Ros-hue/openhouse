@@ -1,6 +1,21 @@
 import type { Metadata } from 'next';
+import { Audiowide, Rajdhani } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script'; // ✅ Import Script
+
+const audiowide = Audiowide({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-audiowide',
+  display: 'swap',
+});
+
+const rajdhani = Rajdhani({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-rajdhani',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Cambrian Open House',
@@ -31,20 +46,15 @@ export default function RootLayout({
           }}
         />
 
-        {/* Fonts */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body>
+      <body className={`${audiowide.variable} ${rajdhani.variable}`}>
         {/* ✅ GTM noscript fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TWM6T25X"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            className="gtm-noscript-frame"
           ></iframe>
         </noscript>
 

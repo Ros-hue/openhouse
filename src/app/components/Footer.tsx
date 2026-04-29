@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-white text-black overflow-hidden flex flex-col">
       {/* Content-Footer Divider Line - Mobbin Style */}
-      <div className="absolute top-0 left-0 right-0 w-full flex justify-center items-center" style={{ height: '1px' }}>
+      <div className="absolute top-0 left-0 right-0 w-full flex justify-center items-center h-px">
         <motion.div
           className="w-full max-w-[90%] h-[1px] bg-gray-300 mx-auto"
           initial={{ width: "0%" }}
@@ -20,9 +20,7 @@ export default function Footer() {
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div className="absolute inset-0 footer-bg-pattern" />
       </div>
 
       {/* Main Content */}
@@ -79,36 +77,42 @@ export default function Footer() {
                 <span className="absolute -bottom-2 left-0 w-12 h-1 bg-black rounded-full"></span>
               </h3>
               <ul className="space-y-4">
-                <motion.li
-                  className="flex items-start space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <FaLocationDot className="text-xl mt-1" />
-                  <span className="font-['OSK'] tracking-wide text-gray-800">CITech, Krishnarajapuram, Bengaluru - 560036</span>
-                </motion.li>
-                <motion.li
-                  className="flex items-start space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <FaPhone className="text-xl mt-1" />
-                  <span className="font-['OSK'] tracking-wide text-gray-800">+91 7676270355, +91 6360146030 </span>
-                </motion.li>
-                <motion.li
-                  className="flex items-start space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  <FaEnvelope className="text-xl mt-1" />
-                  <span className="font-['OSK'] tracking-wide text-gray-800">openhouse@cambridge.edu.in</span>
-                </motion.li>
+                <li className="flex items-start space-x-3">
+                  <motion.div
+                    className="flex items-start space-x-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <FaLocationDot className="text-xl mt-1" />
+                    <span className="font-['OSK'] tracking-wide text-gray-800">CITech, Krishnarajapuram, Bengaluru - 560036</span>
+                  </motion.div>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <motion.div
+                    className="flex items-start space-x-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <FaPhone className="text-xl mt-1" />
+                    <span className="font-['OSK'] tracking-wide text-gray-800">+91 7676270355, +91 6360146030 </span>
+                  </motion.div>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <motion.div
+                    className="flex items-start space-x-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    <FaEnvelope className="text-xl mt-1" />
+                    <span className="font-['OSK'] tracking-wide text-gray-800">openhouse@cambridge.edu.in</span>
+                  </motion.div>
+                </li>
               </ul>
             </motion.div>
 

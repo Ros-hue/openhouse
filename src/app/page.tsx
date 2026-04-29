@@ -1,6 +1,7 @@
 // src/app/page.tsx
 'use client';
 import React from 'react';
+import { useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import { motion } from 'framer-motion';
@@ -10,42 +11,43 @@ import Navbar from './components/Navbar';
 import Venue from './components/Venue';
 import Footer from './components/Footer';
 import FAQ from './components/FAQ';
+import RegisterButton from './components/RegisterButton';
 //import MetaTagRotator from './components/MetaTagRotator';
 // import { motion } from 'framer-motion';
 //import PartnersMarquee from './components/PartnersMarquee';
 import Reason from './components/reason';
+import { getRegistrationHash, scrollToRegistrationSection } from '@/lib/scrollToRegistration';
 
 export default function MainPage() {
-  const scrollToRegistration = () => {
-    const element = document.getElementById('registration-section');
-    if (element) {
-      const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+  useEffect(() => {
+    if (window.location.hash !== getRegistrationHash()) {
+      return;
     }
-  };
+
+    const timer = window.setTimeout(() => {
+      scrollToRegistrationSection();
+    }, 150);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative min-h-screen">
       <Navbar />
 
       <div className="bottom-4 sm:bottom-6 z-50 fixed right-4 sm:right-6">
-        <motion.button
+        <RegisterButton
           className="bg-[#FF8A00] text-white font-['OSK'] tracking-wider uppercase py-3 px-5 sm:px-6 rounded-full text-sm sm:text-base shadow-lg transition-all hover:bg-[#FFB700]"
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
-          whileHover={{ scale: 1.03, boxShadow: '0 0 15px 2px rgba(255,138,0,0.3)' }}
-          whileTap={{ scale: 0.98 }}
-          onClick={scrollToRegistration}
         >
-          Register Now
-        </motion.button>
+          <motion.span
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+            className="block"
+          >
+            Register Now
+          </motion.span>
+        </RegisterButton>
       </div>
 
 

@@ -11,6 +11,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "amqplib": "^0.10.5",
+    "caniuse-lite": "^1.0.30001790",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
     "framer-motion": "^12.5.0",
@@ -18,14 +19,14 @@
     "google-spreadsheet": "^4.1.4",
     "gsap": "^3.15.0",
     "lucide-react": "^1.8.0",
-    "next": "15.2.8",
+    "next": "^15.5.15",
     "next-themes": "^0.4.6",
     "pg": "^8.14.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
-    "tailwind": "^4.0.0",
+    "tailwind": "^2.3.1",
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
