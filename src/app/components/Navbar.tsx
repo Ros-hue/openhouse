@@ -56,6 +56,9 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 // import Link from 'next/link';
 import gsap from 'gsap';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { scrollToRegistrationSection, getRegistrationHash } from '@/lib/scrollToRegistration';
 
 const Navbar: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
@@ -79,13 +82,15 @@ const Navbar: React.FC = () => {
     return () => ctx.revert();
   }, []);
 
+  const pathname = usePathname();
+  const router = useRouter();
+
   const scrollToRegistration = () => {
-    const element = document.getElementById('registration-section');
-    if (element) {
-      const offset = 100;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    if (pathname !== '/') {
+      router.push(`/${getRegistrationHash()}`);
+      return;
     }
+    scrollToRegistrationSection();
   };
 
   return (
@@ -121,6 +126,14 @@ const Navbar: React.FC = () => {
           </span>
           
         </button>
+        <Link
+          href="/flea-market/gallery"
+          className="flex items-center gap-3 h-11 px-6 rounded-xl bg-zinc-950 dark:bg-white text-white dark:text-black hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl"
+        >
+          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em]">
+            Flea Market
+          </span>
+        </Link>
 
         {/* Module 3: Secondary Action (Sponsors - Now High Visibility) */}
         {/* <Link 
